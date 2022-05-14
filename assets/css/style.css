@@ -16,8 +16,6 @@ body {
     font-family: 'Karla';
 }
 
-/* HEADLINES */
-
 /* HEADER */
 
 header nav {
@@ -76,9 +74,33 @@ section {
 }
 
 .FirstCat article:first-of-type, .SecCat article:first-of-type, .ThrCat article:first-of-type, .ForCat article:first-of-type, .FifCat article:first-of-type {
-    background-color: red;
     grid-column: 1 / span 3;
     grid-row: 1 / span 1;
+}
+
+/*  */
+
+.PrdDescription {
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-columns: 2;
+}
+
+.PrdName {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    font-weight: bold;
+}
+
+.Price {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    font-weight: bold;
+    text-align: right;
+}
+
+.Brand {
+    color: #848484;
 }
 
 /* FOOTER */
@@ -156,9 +178,13 @@ footer h3 {
 /* IMAGES */
 
 .BigPrd img {
-    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
 
 .SmallPrd img {
-    max-width: 80%;
+    object-fit: cover;
+    width: 100%;
+    max-height: 90%;
 }
