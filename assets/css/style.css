@@ -26,6 +26,7 @@ header nav {
     justify-content: space-between;
     margin-top: 20px;
     margin-left: 30px;
+    margin-bottom: 20px;
 }
 
 header nav a {
@@ -67,12 +68,26 @@ nav ul a {
 
 /* MAIN */
 
+section {
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: 3;
+    gap: 15px;
+}
+
+.FirstCat article:first-of-type, .SecCat article:first-of-type, .ThrCat article:first-of-type, .ForCat article:first-of-type, .FifCat article:first-of-type {
+    background-color: red;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+}
+
 /* FOOTER */
 
 footer {
     display: grid;
     grid-template-rows: 2;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 30px;
 }
 
 footer a {
@@ -139,3 +154,11 @@ footer h3 {
 }
 
 /* IMAGES */
+
+.BigPrd img {
+    max-width: 100%;
+}
+
+.SmallPrd img {
+    max-width: 80%;
+}
