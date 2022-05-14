@@ -68,9 +68,20 @@ nav ul a {
 
 section {
     display: grid;
-    grid-template-rows: 3;
-    grid-template-columns: 3;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.FifCat{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .FirstCat article:first-of-type, .SecCat article:first-of-type, .ThrCat article:first-of-type, .ForCat article:first-of-type, .FifCat article:first-of-type {
@@ -78,18 +89,20 @@ section {
     grid-row: 1 / span 1;
 }
 
-/*  */
+/* PRODUCTDESCRIPTION & PRICE */
 
 .PrdDescription {
     display: grid;
-    grid-template-rows: 2;
-    grid-template-columns: 2;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 15px;
 }
 
 .PrdName {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .Price {
@@ -107,7 +120,7 @@ section {
 
 footer {
     display: grid;
-    grid-template-rows: 2;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-bottom: 30px;
 }
@@ -169,10 +182,17 @@ footer h3 {
     grid-row: 1 / span 1;
 }
 
+/* COPYRIGHT */
+
 .CellFooter:nth-of-type(5) {
     grid-column: 1 / span 4;
     grid-row: 2 / span 2;
     margin-left: 30px;
+}
+
+.CellFooter:nth-of-type(5) span {
+    font-weight: bold;
+    vertical-align: top;
 }
 
 /* IMAGES */
@@ -187,4 +207,9 @@ footer h3 {
     object-fit: cover;
     width: 100%;
     max-height: 90%;
+}
+
+img:hover {
+    opacity: 0.3;
+    transition: opacity 0.5s ease-in-out;
 }
